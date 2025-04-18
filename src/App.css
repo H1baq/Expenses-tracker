@@ -3,7 +3,11 @@
   margin: auto;
   padding: 40px;
   font-family: sans-serif;
-  color: #141212;
+  color: #f3e7e7;
+}
+.search-bar{
+  margin-bottom: 20px;
+  width:50%
 }
 
 h1 {
@@ -27,12 +31,13 @@ h1 {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 11px;
   
 }
 
