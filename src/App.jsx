@@ -28,8 +28,14 @@ function App  (){
         <div className='container'>
             <h1>Expense Tracker</h1>
             <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
-            <ExpenseForm onAddExpense={addExpense}/>
-            <ExpenseTable expenses={filteredExpenses} onDelete={deleteExpense}/>
+            <div className='wrapper'>
+                <div className='form-container'>
+                <ExpenseForm onAddExpense={addExpense}/>
+                </div>
+                <div className='table-container'>
+                <ExpenseTable expenses={filteredExpenses} onDelete={deleteExpense}/>
+                </div>
+                </div>
         </div>
     );
 };
