@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+
 const ExpenseForm= ({ onAddExpense}) => {
     const [form,setForm]=useState({
         name: '',
@@ -7,9 +8,11 @@ const ExpenseForm= ({ onAddExpense}) => {
         amount: '',
         date: '',
     });
+
     const handleChange = (e) => {
         setForm ({...form, [e.target.name]: e.target.value});
     };
+
     const  handleSubmit = (e) => {
         e.preventDefault();
         const newExpense = {
@@ -19,6 +22,7 @@ const ExpenseForm= ({ onAddExpense}) => {
         onAddExpense(newExpense);
         setForm({ name:'', description:'', amount: '', category: '', date:''});
     }; 
+    
     return (
         <form onSubmit={handleSubmit}>
             <input name= "name" value={form.name} onChange={handleChange} placeholder="Expense Name" required/>

@@ -1,5 +1,6 @@
 import React from "react";
-const ExpenseTable = ({ expenses}) => {
+
+const ExpenseTable = ({ expenses, onDelete}) => {
     return (
         <table>
             <thead>
@@ -8,7 +9,8 @@ const ExpenseTable = ({ expenses}) => {
                     <th>description</th>
                     <th>category</th>
                     <th>amount</th>
-                    <th>date</th>  
+                    <th>date</th> 
+                    <th>Delete</th> 
                 </tr>
             </thead>
             <tbody>
@@ -19,6 +21,9 @@ const ExpenseTable = ({ expenses}) => {
                         <td>{expense.category}</td>
                         <td>{expense.amount}</td>
                         <td>{expense.date}</td>
+                        <td>
+                            <button onClick={() => onDelete(expense.id)}>Delete</button>
+                        </td>
                     </tr>
                 ))}
             </tbody>
